@@ -22,14 +22,28 @@ const Statistics = (props) => {
     const avg = ((goodCount * 1 + neutralCount * 0 + badCount * -1) / total)
     const positive = ((goodCount / total * 100) + " %")
     return (
-      <div>
-        <StatisticLine text="good" value={goodCount} ></StatisticLine>
-        <StatisticLine text="neutral" value={neutralCount} ></StatisticLine>
-        <StatisticLine text="bad" value={badCount} ></StatisticLine>
-        <StatisticLine text="all" value={total} ></StatisticLine>
-        <StatisticLine text="average" value={avg} ></StatisticLine>
-        <StatisticLine text="positive" value={positive} ></StatisticLine>
-      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td><StatisticLine text="good" value={goodCount} ></StatisticLine></td>
+          </tr>
+          <tr>
+            <td><StatisticLine text="neutral" value={neutralCount} ></StatisticLine></td>
+          </tr>
+          <tr>
+            <td><StatisticLine text="bad" value={badCount} ></StatisticLine></td>
+          </tr>
+          <tr>
+            <td><StatisticLine text="all" value={total} ></StatisticLine></td>
+          </tr>
+          <tr>
+            <td><StatisticLine text="average" value={avg} ></StatisticLine></td>
+          </tr>
+          <tr>
+            <td><StatisticLine text="positive" value={positive} ></StatisticLine></td>
+          </tr>
+        </tbody>
+      </table>
     )
   }
   return (
