@@ -11,7 +11,13 @@ const create = (newObject) =>{
 }
 const update = (id, newObject) =>{
     const request = axios.put(`${baseUrl}/${id}`,newObject)
-    return request.then(response => response.data)
+    console.log("Test")
+    return request.then(response =>{
+        if(response.status<200 || response.status>=300){
+            throw new Error(`Update request failed with status ${response.status}`)
+        }
+        return response.data
+    })
 }
 
 const deleteName = (id) => {
