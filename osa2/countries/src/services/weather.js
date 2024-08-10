@@ -2,7 +2,7 @@ import axios from "axios"
 const iconBaseUrl = 'https://openweathermap.org/img/wn/'
 
 const generateUrl =(lat, lon, appId) =>{
-    return `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`;
+    return `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}&units=metric`;
 }
 
 const getCountryWeather = (lat, lon, appId) => {

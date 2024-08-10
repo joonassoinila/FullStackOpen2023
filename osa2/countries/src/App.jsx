@@ -71,6 +71,7 @@ function WeatherComponent({ countryLat, countryLong, weatherKey}) {
         //Hakee weatherJObjectin maan sijainnin perusteella
         const weatherJObject = await weatherService.getCountryWeather(countryLat, countryLong, weatherKey);
         const countryTemperature = weatherJObject.main.temp;
+        console.log('Weath',weatherJObject)
         const countryWind = weatherJObject.wind.speed;
         //Hakee weatherJObjectin perusteella sää-iconin
         const weatherIconCode = await weatherJObject.weather[0].icon;
