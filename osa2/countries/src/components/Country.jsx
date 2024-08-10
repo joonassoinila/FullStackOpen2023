@@ -1,4 +1,4 @@
-const Country = ({country, toggleData}) =>{
+const Country = ({country, toggleData, clickFunction}) =>{
   const capital = country.capital
   const area = country.area
   const languages = Object.keys(country.languages)
@@ -16,7 +16,7 @@ const Country = ({country, toggleData}) =>{
     <picture>{flag}</picture>
     </div>
   )
-  :<p>{country.name.common}</p>
+  :<p>{country.name.common}<button onClick={clickFunction}>show</button></p>
     return(
       <li className="country">
         {shownData}
